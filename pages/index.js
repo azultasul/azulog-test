@@ -1,14 +1,14 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import styles from '../styles/Home.module.scss'
-import { supabase } from '../utils/supabaseClient';
+import { supabase } from '~/utils/supabaseClient';
+import FilledTitle from '~/components/FilledTitle';
 import { useEffect } from 'react';
 
 const Home = ({ works }) => {
-  useEffect(() => {
-    console.log("supabase", supabase);
-    console.log("works", works);
-  }, [])
+  // useEffect(() => {
+  //   console.log("supabase", supabase);
+  //   console.log("works", works);
+  // }, [])
 
   return (
     <div>
@@ -19,6 +19,7 @@ const Home = ({ works }) => {
       </Head>
 
       <div>
+        <FilledTitle></FilledTitle>
         {/* {works.map((work) => (
           <li key={work.id}>{work.name}</li>
         ))} */}
